@@ -28,6 +28,18 @@ export default {
       default() {
         return [];
       }
+    },
+    title: {
+      type: String,
+      default() {
+        return ''
+      }
+    },
+    subTitle: {
+      type: String,
+      default() {
+        return ''
+      }
     }
   },
   data() {
@@ -35,6 +47,11 @@ export default {
       chartDom: null,
       reverseChart: null,
       defaultOption: {
+        title: {
+          text: null,
+          subtext: null,
+          left: 'center'
+        },
         grid: {
           top: 10,
           bottom: 30,
@@ -86,27 +103,32 @@ export default {
     keysData() {
       return this.source && this.source.map(ele => ele.name) || []
     },
-    init() {
+    composeOptions() {
       const _that = this;
 
-      _that.chartDom = _that.$refs.reverseBar;
-      if (_that.chartDom) {
-        _that.reverseChart = echarts.init(_that.chartDom, null, {
+      _that.defaultOption.title.text = this.title;
+      _that.defaultOption.title.subtext = this.subTitle;
+
+      _that.defaultOption.yAxis.data = _that.keysData();
+      _that.defaultOption.series[0].data = _that.source;
+
+      _that.defaultOption.series[0].itemStyle = {
+        color: function (param) {
+          return _that.colors[param.dataIndex % _that.colors.length] || '#5470c6';
+        }
+      };
+    },
+    init() {
+      this.chartDom = this.$refs.reverseBar;
+      if (this.chartDom) {
+        this.reverseChart = echarts.init(this.chartDom, null, {
           renderer: 'canvas'
         });
 
-        _that.defaultOption.yAxis.data = _that.keysData();
-        _that.defaultOption.series[0].data = _that.source;
+        this.composeOptions();
+        this.reverseChart.resize({height: this.source.length * 3 * 20 + 20});
 
-        _that.defaultOption.series[0].itemStyle = {
-          color: function (param) {
-            return _that.colors[param.dataIndex % _that.colors.length] || '#5470c6';
-          }
-        };
-
-        _that.reverseChart.resize({height: _that.source.length * 3 * 20 + 20});
-
-        _that.reverseChart.setOption(Object.assign({}, _that.defaultOption, _that.options))
+        this.reverseChart.setOption(Object.assign({}, this.defaultOption, this.options))
       }
     }
   }

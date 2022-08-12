@@ -11,6 +11,24 @@ import "vue-charts-cmp/dist/vcc-chart.css";
 ```
 <vcc-reversebar
       :source="testData"
+      :colors="colors"
+      :options="options"
+      :title="title"
+      :subTitle="subTitle"
     />
-testData=[{name: 'A', value: 20}, {name: 'B', value: 10}]    
+
+数据源格式:  
+testData=[{name: 'A', value: 20}, {name: 'B', value: 10}]
+
+基色：
+colors=['#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#3ba272', '#fc8452', '#9a60b4','#ea7ccc'] 
+
+图表配置项：
+options
+
+图表主标题：
+title
+
+图表副标题：
+subtitle
 ```
