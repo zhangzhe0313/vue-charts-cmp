@@ -1,10 +1,22 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <h1>this is main App Test Page</h1>
+
+    <vcc-reversebar />
+  </div>
 </template>
+
+<script>
+import VccReversebar from '../packages/charts/reversebar/src/index.vue';
+
+export default {
+  name: 'AppTest',
+  components: {
+    VccReversebar
+  }
+}
+
+</script>
 
 <style lang="scss">
 #app {
