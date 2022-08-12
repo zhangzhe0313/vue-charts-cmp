@@ -1,18 +1,10 @@
 # vue-charts-cmp
 
-## Project setup
-```
-yarn install
-```
 
-### Compiles and hot-reloads for development
+### 引入文件
 ```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
+import XXX from 'vue-charts-cmp/dist/vcc-chart.umd';
+import "vue-charts-cmp/dist/vcc-chart.css";
 ```
 
 ### 横向竖状图

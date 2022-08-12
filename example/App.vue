@@ -21,7 +21,7 @@ export default {
       testData: [
         {
           name: 'A',
-          value: 10
+          value: 90
         }, {
           name: 'B',
           value: 80
@@ -33,7 +33,13 @@ export default {
           value: 100
         }, {
           name: 'E',
-          value: 300
+          value: 50
+        }, {
+          name: 'F',
+          value: 200
+        }, {
+          name: 'G',
+          value: 600
         }
       ]
     }

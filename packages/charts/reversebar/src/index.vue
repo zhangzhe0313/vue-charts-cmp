@@ -61,7 +61,8 @@ export default {
               show: true,
               precision: 1,
               position: 'right',
-              valueAnimation: true
+              valueAnimation: true,
+              color: 'inherit'
             },
             encode: {
               x: 0,
@@ -103,7 +104,7 @@ export default {
           }
         };
 
-        _that.reverseChart.resize({height: _that.source.length * 3 * 24 + 20});
+        _that.reverseChart.resize({height: _that.source.length * 3 * 20 + 20});
 
         _that.reverseChart.setOption(Object.assign({}, _that.defaultOption, _that.options))
       }

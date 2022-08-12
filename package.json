@@ -1,17 +1,24 @@
 {
   "name": "vue-charts-cmp",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.1",
+  "private": false,
+  "main": "dist/vcc-chart.umd.min.js",
+  "files": [
+    "dist/*"
+  ],
+  "keywords": [
+    "vue-charts-cmp"
+  ],
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
     "lib:umd": "vue-cli-service build --target lib --name vcc-chart -dest package packages/index.js"
   },
   "dependencies": {
     "core-js": "^3.8.3",
     "echarts": "^5.3.3",
-    "vue": "^3.2.13"
+    "vue": "^3.2.13",
+    "vue-charts-cmp": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -24,5 +31,9 @@
     "eslint-plugin-vue": "^8.0.3",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zhangzhe0313/vue-charts-cmp.git"
   }
 }

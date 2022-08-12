@@ -5800,6 +5800,15 @@ vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
 
+vue-charts-cmp@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vue-charts-cmp/-/vue-charts-cmp-1.0.0.tgz#bc60b54cc7b0ead2e7c689a1f7d3d3f6dd488458"
+  integrity sha512-SQuvoTQRLk/r/3nqb4DIq7cogCMtkFbVPnI+nDTLupMjEzG3u+vL3Tzgfs9zZLbYqDId6XZ9pMeSgZWDC2m/4Q==
+  dependencies:
+    core-js "^3.8.3"
+    echarts "^5.3.3"
+    vue "^3.2.13"
+
 vue-eslint-parser@^8.0.1:
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-8.3.0.tgz#5d31129a1b3dd89c0069ca0a1c88f970c360bd0d"
