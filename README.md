@@ -15,10 +15,10 @@ yarn serve
 yarn build
 ```
 
-### Lints and fixes files
+### 横向竖状图
 ```
-yarn lint
+<vcc-reversebar
+      :source="testData"
+    />
+testData=[{name: 'A', value: 20}, {name: 'B', value: 10}]    
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

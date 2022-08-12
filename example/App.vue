@@ -2,7 +2,9 @@
   <div>
     <h1>this is main App Test Page</h1>
 
-    <vcc-reversebar />
+    <vcc-reversebar
+      :source="testData"
+    />
   </div>
 </template>
 
@@ -13,30 +15,29 @@ export default {
   name: 'AppTest',
   components: {
     VccReversebar
+  },
+  data() {
+    return {
+      testData: [
+        {
+          name: 'A',
+          value: 10
+        }, {
+          name: 'B',
+          value: 80
+        }, {
+          name: 'C',
+          value: 30
+        }, {
+          name: 'D',
+          value: 100
+        }, {
+          name: 'E',
+          value: 300
+        }
+      ]
+    }
   }
 }
 
 </script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
