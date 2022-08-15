@@ -9,6 +9,7 @@
     <vcc-piebar
       ring
       :source="testData"
+      :options="options"
     />
 
   </div>
@@ -50,7 +51,19 @@ export default {
           name: 'G',
           value: 600
         }
-      ]
+      ],
+      // testData: [],
+      options: {
+        series: [
+          {
+            radius: ['60%', '80%'],
+            test: {
+              taruuu: 'ccccc',
+              ooo: [12312, 123123]
+            }
+          }
+        ]
+      }
     }
   }
 }

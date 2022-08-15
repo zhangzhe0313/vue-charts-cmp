@@ -6,6 +6,7 @@
 <script>
 import * as echarts from 'echarts';
 import EmptyDataCmp from '../../../components/empty/index.vue';
+import { composeOptionsSource } from 'packages/tools';
 
 export default {
   name: 'VccReversebar',
@@ -130,7 +131,7 @@ export default {
         this.composeOptions();
         this.reverseChart.resize({height: this.source.length * 3 * 20 + 20});
 
-        this.reverseChart.setOption(Object.assign({}, this.defaultOption, this.options))
+        this.reverseChart.setOption(composeOptionsSource(this.defaultOption, this.options));
       }
     }
   }

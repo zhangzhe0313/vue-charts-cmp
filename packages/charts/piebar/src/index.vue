@@ -6,6 +6,7 @@
 <script>
 import * as echarts from 'echarts';
 import EmptyDataCmp from '../../../components/empty/index.vue';
+import { composeOptionsSource } from '../../../tools/index';
 
 export default {
   name: 'VccPiebar',
@@ -108,7 +109,7 @@ export default {
 
         this.piebarChart.resize({height: this.chartHeight});
 
-        this.piebarChart.setOption(Object.assign({}, this.defaultOptions, this.options));
+        this.piebarChart.setOption(composeOptionsSource(this.defaultOptions, this.options));
       }
     }
   }
