@@ -6,7 +6,7 @@
 <script>
 import * as echarts from 'echarts';
 import EmptyDataCmp from '../../../components/empty/index.vue';
-import { composeOptionsSource } from 'packages/tools';
+import { composeOptionsSource } from '../../../tools';
 
 export default {
   name: 'VccReversebar',

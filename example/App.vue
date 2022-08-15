@@ -56,7 +56,7 @@ export default {
       options: {
         series: [
           {
-            radius: ['60%', '80%'],
+            radius: ['40%', '60%'],
             test: {
               taruuu: 'ccccc',
               ooo: [12312, 123123]
