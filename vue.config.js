@@ -7,6 +7,25 @@ module.exports = {
       // chunks: ['echarts', 'vcharts', 'vendors']
     }
   },
+  // configureWebpack: config => {
+  //   return {
+  //     optimization: {
+  //       splitChunks: {
+  //         chunks: 'async',
+  //         minSize: 10000,
+  //         minChunks: 1,
+  //         cacheGroups: {
+  //           commonCmp: {
+  //             name: `chunk-commonCmp`,
+  //             minChunks: 2,
+  //             priority: -20, 
+  //             chunks: 'initial'
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // },
   chainWebpack: config => {
     config.module
         .rule('js')

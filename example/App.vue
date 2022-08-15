@@ -2,19 +2,28 @@
   <div>
     <h1>this is main App Test Page</h1>
 
-    <vcc-reversebar
+    <!-- <vcc-reversebar
+      :source="testData"
+    /> -->
+
+    <vcc-piebar
+      ring
       :source="testData"
     />
+
   </div>
 </template>
 
 <script>
-import VccReversebar from '../packages/charts/reversebar/src/index.vue';
+// import VccReversebar from '../packages/charts/reversebar/src/index.vue';
+
+import VccPiebar from '../packages/charts/piebar/src/index.vue';
 
 export default {
   name: 'AppTest',
   components: {
-    VccReversebar
+    // VccReversebar,
+    VccPiebar
   },
   data() {
     return {

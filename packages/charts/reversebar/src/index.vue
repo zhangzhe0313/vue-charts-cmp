@@ -1,15 +1,17 @@
 <template>
   <div v-if="source.length > 1" class="chart-wrap" ref="reverseBar"></div>
-  <div v-else class="chart-empty" ref="reverseBar">
-    暂无数据
-  </div>
+  <empty-data-cmp v-else />
 </template>
 
 <script>
 import * as echarts from 'echarts';
+import EmptyDataCmp from '../../../components/empty/index.vue';
 
 export default {
   name: 'VccReversebar',
+  components: {
+    EmptyDataCmp
+  },
   props: {
     options: {
       type: Object,
@@ -140,14 +142,5 @@ export default {
   width: auto;
   height: 100%;
   min-height: 200px;
-}
-
-.chart-empty {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: 250px;
-  opacity: 0.4;
 }
 </style>
