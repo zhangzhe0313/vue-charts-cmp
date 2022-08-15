@@ -18,7 +18,7 @@ export default {
     source: {
       type: Array,
       default() {
-        return [];
+        return []
       }
     },
     title: {
