@@ -1,5 +1,5 @@
 <template>
-  <div v-if="source && source.length > 0"  class="chart-wrap" ref="pieBar">niii</div>
+  <div v-if="source && source.length > 0"  class="chart-wrap" ref="pieBar"></div>
   <empty-data-cmp v-else />
 </template>
 
