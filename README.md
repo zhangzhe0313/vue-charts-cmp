@@ -67,3 +67,28 @@ chartHeight
 图表是否展示每部分数据： bool
 labelled
 ```
+
+### 基础折现图
+```
+<vcc-blinebar
+      :source="testData"
+      :options="options"
+      :title="title"
+      :subTitle="subTitle"
+    />
+
+数据源格式: array
+testData=[
+  {name: 'A', data: [{name: 'won', 'value': 10}, {name: 'tue', 'value': 10}]}, 
+  {name: 'B', data: [{name: 'won', 'value': 10}, {name: 'tue', 'value': 10}]}
+]
+
+图表配置项：object
+options
+
+图表主标题：string
+title
+
+图表副标题：string
+subtitle
+```

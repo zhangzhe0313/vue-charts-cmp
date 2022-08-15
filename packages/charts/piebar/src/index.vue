@@ -103,7 +103,7 @@ export default {
     init() {
       this.piebarDom = this.$refs.pieBar;
       if (this.piebarDom) {
-        this.piebarChart = echarts.init(this.piebarDom, null, { renderer: 'canvas' });
+        this.piebarChart = echarts.init(this.piebarDom, null, { renderer: 'svg' });
 
         this.composeOptions();
 

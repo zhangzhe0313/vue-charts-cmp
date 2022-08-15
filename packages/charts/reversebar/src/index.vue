@@ -125,7 +125,7 @@ export default {
       this.chartDom = this.$refs.reverseBar;
       if (this.chartDom) {
         this.reverseChart = echarts.init(this.chartDom, null, {
-          renderer: 'canvas'
+          renderer: 'svg'
         });
 
         this.composeOptions();

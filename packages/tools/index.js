@@ -1,6 +1,6 @@
 
 export const composeOptionsSource = (des, tar) => {
-  if (!tar || typeof tar !== 'object') {
+  if (!tar || typeof tar !== 'object' || Object.keys(tar).length === 0) {
     return des;
   }
 

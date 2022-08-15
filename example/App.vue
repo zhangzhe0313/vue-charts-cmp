@@ -6,10 +6,14 @@
       :source="testData"
     /> -->
 
-    <vcc-piebar
+    <!-- <vcc-piebar
       ring
       :source="testData"
       :options="options"
+    /> -->
+
+    <vcc-blinebar
+      :source="testData"
     />
 
   </div>
@@ -18,52 +22,86 @@
 <script>
 // import VccReversebar from '../packages/charts/reversebar/src/index.vue';
 
-import VccPiebar from '../packages/charts/piebar/src/index.vue';
+// import VccPiebar from '../packages/charts/piebar/src/index.vue';
+
+import VccBlinebar from '../packages/charts/blinebar/src/index.vue';
 
 export default {
   name: 'AppTest',
   components: {
     // VccReversebar,
-    VccPiebar
+    // VccPiebar,
+    VccBlinebar
   },
   data() {
     return {
+      // testData: [
+      //   {
+      //     name: 'A',
+      //     value: 90
+      //   }, {
+      //     name: 'B',
+      //     value: 80
+      //   }, {
+      //     name: 'C',
+      //     value: 30
+      //   }, {
+      //     name: 'D',
+      //     value: 100
+      //   }, {
+      //     name: 'E',
+      //     value: 50
+      //   }, {
+      //     name: 'F',
+      //     value: 200
+      //   }, {
+      //     name: 'G',
+      //     value: 600
+      //   }
+      // ],
       testData: [
         {
           name: 'A',
-          value: 90
+          data: [
+            {
+              name: 'mon',
+              value: 100
+            }, {
+              name: 'tue',
+              value: 200
+            }, {
+              name: 'wed',
+              value: 400
+            }
+          ]
         }, {
           name: 'B',
-          value: 80
-        }, {
-          name: 'C',
-          value: 30
-        }, {
-          name: 'D',
-          value: 100
-        }, {
-          name: 'E',
-          value: 50
-        }, {
-          name: 'F',
-          value: 200
-        }, {
-          name: 'G',
-          value: 600
-        }
+          data: [
+            {
+              name: 'mon',
+              value: 300
+            }, {
+              name: 'tue',
+              value: 600
+            }, {
+              name: 'wed',
+              value: 900
+            }
+          ]
+        }, 
       ],
       // testData: [],
-      options: {
-        series: [
-          {
-            radius: ['40%', '60%'],
-            test: {
-              taruuu: 'ccccc',
-              ooo: [12312, 123123]
-            }
-          }
-        ]
-      }
+      // options: {
+      //   series: [
+      //     {
+      //       // radius: ['40%', '60%'],
+      //       test: {
+      //         taruuu: 'ccccc',
+      //         ooo: [12312, 123123]
+      //       }
+      //     }
+      //   ]
+      // }
     }
   }
 }
