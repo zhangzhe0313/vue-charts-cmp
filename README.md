@@ -36,7 +36,7 @@ subtitle
 
 ### 饼状图
 ```
-<vcc-piesebar
+<vcc-piebar
       :source="testData"
       :options="options"
       :title="title"
