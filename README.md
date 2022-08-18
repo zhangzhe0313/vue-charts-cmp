@@ -7,6 +7,32 @@ import XXX from 'vue-charts-cmp/dist/vcc-chart.umd';
 import "vue-charts-cmp/dist/vcc-chart.css";
 ```
 
+### 基础竖状图
+```
+<vcc-verticalbar
+      :source="testData"
+      :color="color"
+      :options="options"
+      :title="title"
+      :subTitle="subTitle"
+    />
+
+数据源格式:  array
+testData=[{name: 'A', value: 20}, {name: 'B', value: 10}]
+
+基色：String
+colors= '#5470c6';
+
+图表配置项：object
+options
+
+图表主标题：string
+title
+
+图表副标题：string
+subtitle    
+```
+
 ### 横向竖状图
 ```
 <vcc-reversebar

@@ -56,10 +56,10 @@ export default {
           left: 'center'
         },
         grid: {
-          top: 10,
-          bottom: 30,
-          left: 50,
-          right: 50
+          top: '3%',            
+          left: '3%',
+          right: '4%',
+          bottom: '3%',
         },
         xAxis: {
           max: 'dataMax',

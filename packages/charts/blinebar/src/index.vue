@@ -62,6 +62,10 @@ export default {
         legend: {
           data: []
         },
+        grid: {
+          left: '4%',
+          right: '4%',
+        },
         xAxis: {
           type: 'category',
           boundaryGap: true,

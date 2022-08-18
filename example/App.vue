@@ -9,13 +9,16 @@
     <!-- <vcc-piebar
       ring
       :source="testData"
-      :colors="colors"
     /> -->
 
     <vcc-blinebar
       :source="testData"
-      :colors="colors"
     />
+
+    <!-- <vcc-verticalbar 
+      :source="testData"
+      :color="color"
+    /> -->
 
   </div>
 </template>
@@ -27,16 +30,20 @@
 
 import VccBlinebar from '../packages/charts/blinebar/src/index.vue';
 
+// import VccVerticalbar from '../packages/charts/verticalbar/src/index.vue';
+
 export default {
   name: 'AppTest',
   components: {
     // VccReversebar,
     // VccPiebar,
-    VccBlinebar
+    VccBlinebar,
+    // VccVerticalbar
   },
   data() {
     return {
       colors: ['#ff0000', '#0000ff'],
+      color: '#0000ff',
       // testData: [
       //   {
       //     name: 'A',
@@ -89,6 +96,19 @@ export default {
       //     }
       //   ]
       // }
+
+      // testData: [
+      //   {
+      //     name: 'mon',
+      //     value: 100
+      //   }, {
+      //     name: 'tue',
+      //     value: 300
+      //   }, {
+      //     name: 'tue',
+      //     value: 50
+      //   }
+      // ]
     }
   }
 }
