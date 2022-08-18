@@ -44,6 +44,7 @@ subtitle
       :ring="ring"
       :chartHeight="height"
       :labelled="labelled"
+      :colors="colors"
     />
 
 数据源格式: array
@@ -66,6 +67,9 @@ chartHeight
 
 图表是否展示每部分数据： bool
 labelled
+
+基色：array
+colors=['#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#3ba272', '#fc8452', '#9a60b4','#ea7ccc'] 
 ```
 
 ### 基础折现图
@@ -75,6 +79,7 @@ labelled
       :options="options"
       :title="title"
       :subTitle="subTitle"
+      :colors="colors"
     />
 
 数据源格式: array
@@ -91,4 +96,7 @@ title
 
 图表副标题：string
 subtitle
+
+基色：array
+colors=['#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#3ba272', '#fc8452', '#9a60b4','#ea7ccc'] 
 ```

@@ -55,6 +55,12 @@ export default {
       default() {
         return true
       }
+    },
+    colors: {
+      type: Array,
+      default() {
+        return ['#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#3ba272', '#fc8452', '#9a60b4', '#ea7ccc'];
+      }
     }
   },
   data(){
@@ -92,13 +98,23 @@ export default {
   },
   methods: {
     composeOptions() {
-      if (!this.ring) { // 实心饼图
-        this.defaultOptions.series[0].radius = '50%';
+      const _that = this;
+
+      if (!_that.ring) { // 实心饼图
+        _that.defaultOptions.series[0].radius = '50%';
       } else {
-        this.defaultOptions.series[0].radius = ['45%', '60%'];
+        _that.defaultOptions.series[0].radius = ['45%', '60%'];
       }
-      this.defaultOptions.series[0].data = this.source;
-      this.defaultOptions.series[0].label.show = this.labelled;
+      _that.defaultOptions.series[0].data = _that.source;
+      _that.defaultOptions.series[0].label.show = _that.labelled;
+
+      if (_that.colors.length >= _that.source.length) {
+        _that.defaultOptions.series[0].itemStyle = {
+          color: function (param) {
+            return _that.colors[param.dataIndex % _that.colors.length] || '#5470c6';
+          }
+        };
+      }
     },
     init() {
       this.piebarDom = this.$refs.pieBar;

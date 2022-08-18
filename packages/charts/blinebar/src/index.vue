@@ -38,6 +38,12 @@ export default {
       default() {
         return {}
       }
+    },
+    colors: {
+      type: Array,
+      default() {
+        return ['#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#3ba272', '#fc8452', '#9a60b4', '#ea7ccc'];
+      }
     }
   },
   data() {
@@ -73,26 +79,41 @@ export default {
   },
   methods: {
     composeData() {
+      const _that = this;
+
       const seriesData = [];
-      const xAxisData = this.source.length > 0 && this.source[0].data.map(ele => ele.name) || [];
+      const xAxisData = _that.source.length > 0 && _that.source[0].data.map(ele => ele.name) || [];
       const kinds = [];
 
-      this.source.forEach(ele => {
+      _that.source.forEach((ele, index) => {
         let values = ele.data.map(inner => inner.value);
 
-        seriesData.push({
-          name: ele.name,
-          type: 'line',
-          smooth: true,
-          data: values
-        });
+        if (_that.colors.length >= _that.source.length ) {
+          seriesData.push({
+            name: ele.name,
+            type: 'line',
+            smooth: true,
+            data: values,
+            itemStyle: {
+              color: _that.colors[index % _that.colors.length] || '#5470c6'
+            }
+          });
+        } else {
+          seriesData.push({
+            name: ele.name,
+            type: 'line',
+            smooth: true,
+            data: values
+          });
+        }
 
         kinds.push(ele.name);
       })
 
-      this.defaultOptions.xAxis.data = xAxisData;
-      this.defaultOptions.series = seriesData;
-      this.defaultOptions.legend.data = kinds;
+      _that.defaultOptions.xAxis.data = xAxisData;
+      _that.defaultOptions.series = seriesData;
+      _that.defaultOptions.legend.data = kinds;
+
     },
     init() {
       this.chartDom = this.$refs.blineBar;

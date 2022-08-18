@@ -9,11 +9,12 @@
     <!-- <vcc-piebar
       ring
       :source="testData"
-      :options="options"
+      :colors="colors"
     /> -->
 
     <vcc-blinebar
       :source="testData"
+      :colors="colors"
     />
 
   </div>
@@ -35,6 +36,7 @@ export default {
   },
   data() {
     return {
+      colors: ['#ff0000', '#0000ff'],
       // testData: [
       //   {
       //     name: 'A',
@@ -42,21 +44,6 @@ export default {
       //   }, {
       //     name: 'B',
       //     value: 80
-      //   }, {
-      //     name: 'C',
-      //     value: 30
-      //   }, {
-      //     name: 'D',
-      //     value: 100
-      //   }, {
-      //     name: 'E',
-      //     value: 50
-      //   }, {
-      //     name: 'F',
-      //     value: 200
-      //   }, {
-      //     name: 'G',
-      //     value: 600
       //   }
       // ],
       testData: [

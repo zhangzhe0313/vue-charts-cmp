@@ -115,11 +115,13 @@ export default {
       _that.defaultOption.yAxis.data = _that.keysData();
       _that.defaultOption.series[0].data = _that.source;
 
-      _that.defaultOption.series[0].itemStyle = {
-        color: function (param) {
-          return _that.colors[param.dataIndex % _that.colors.length] || '#5470c6';
-        }
-      };
+      if (_that.colors.length >= _that.source.length) {
+        _that.defaultOption.series[0].itemStyle = {
+          color: function (param) {
+            return _that.colors[param.dataIndex % _that.colors.length] || '#5470c6';
+          }
+        };
+      }
     },
     init() {
       this.chartDom = this.$refs.reverseBar;
