@@ -1,10 +1,11 @@
 {
   "name": "vue-charts-cmp",
-  "version": "1.0.8",
+  "version": "1.0.11",
   "private": false,
   "main": "dist/vcc-chart.umd.min.js",
   "files": [
-    "dist/*"
+    "dist/vcc-chart.umd.min.js",
+    "dist/vcc-chart.css"
   ],
   "keywords": [
     "vue-charts-cmp"
@@ -17,8 +18,7 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "echarts": "^5.3.3",
-    "vue": "^3.2.13",
-    "vue-charts-cmp": "^1.0.8"
+    "vue": "^3.2.13"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

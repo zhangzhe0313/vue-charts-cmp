@@ -3,7 +3,7 @@
 
 ### 引入文件
 ```
-import XXX from 'vue-charts-cmp/dist/vcc-chart.umd';
+import XXX from 'vue-charts-cmp';
 import "vue-charts-cmp/dist/vcc-chart.css";
 ```
 

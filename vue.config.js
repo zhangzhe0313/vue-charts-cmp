@@ -7,6 +7,11 @@ module.exports = {
       // chunks: ['echarts', 'vcharts', 'vendors']
     }
   },
+  // configureWebpack:{
+  //   externals: {
+  //      'vue': 'Vue'
+  //   }
+  // },
   // configureWebpack: config => {
   //   return {
   //     optimization: {
@@ -39,6 +44,9 @@ module.exports = {
             return options
           });
 
+          config.output.filename('./js/[name].[chunkhash:8].js');
+          config.output.chunkFilename('./js/[name].[chunkhash:8].js');
+
     //  config.optimization.splitChunks({
     //     chunks: 'all',
     //     cacheGroups: {
@@ -51,16 +59,6 @@ module.exports = {
     //           name: 'echarts',
     //           priority: -10, 
     //           test: /[\\/]node_modules[\\/]echarts[\\/]/ // in order to adapt to cnpm
-    //         },
-    //         vcharts: {
-    //           name: 'vcharts',
-    //           priority: -10, 
-    //           test: /[\\/]node_modules[\\/]v-charts[\\/]/
-    //         },
-    //         vendors: {
-    //           name: 'vendors',
-    //           priority: -20, 
-    //           test: /[\\/]node_modules[\\/]/
     //         }
     //     }
     //  })     
