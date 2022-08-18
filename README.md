@@ -21,7 +21,7 @@ import "vue-charts-cmp/dist/vcc-chart.css";
 testData=[{name: 'A', value: 20}, {name: 'B', value: 10}]
 
 基色：String
-colors= '#5470c6';
+color= '#5470c6';
 
 图表配置项：object
 options
