@@ -7,6 +7,9 @@ import XXX from 'vue-charts-cmp';
 import "vue-charts-cmp/dist/vcc-chart.css";
 ```
 
+### options 参考echarts官网配置
+![echarts官网](https://echarts.apache.org/zh/index.html)
+
 ### 基础竖状图
 ![基础竖状图](./images/verticalbar.png)
 ```
