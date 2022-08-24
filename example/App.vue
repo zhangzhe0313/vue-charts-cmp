@@ -12,7 +12,7 @@
 
     <!-- <vcc-blinebar
       :source="testData"
-    /> -->
+    />  -->
 
     <!-- <vcc-verticalbar 
       :source="testData"
@@ -115,6 +115,28 @@ export default {
       //   }
       // ]
     }
+  },
+  mounted() {
+    const _that = this;
+    let cnt = 1;
+
+    setInterval(() => {
+      _that.testData.shift();
+      _that.testData.push({
+        name: 'A' +  cnt,
+        value: Math.round(Math.random() * 100)
+      })
+
+      // _that.testData.forEach(ele => {
+      //   ele.data.shift();
+      //   ele.data.push({
+      //     name: 'mon' + cnt,
+      //     value: Math.round(Math.random() * 100)
+      //   })
+      // })
+
+      cnt++;
+    }, 3000)
   }
 }
 

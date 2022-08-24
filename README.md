@@ -8,10 +8,9 @@ import "vue-charts-cmp/dist/vcc-chart.css";
 ```
 
 ### options 参考echarts官网配置
-![echarts官网](https://echarts.apache.org/zh/index.html)
 
-### 基础竖状图
-![基础竖状图](./images/verticalbar.png)
+### 基础柱状图
+![基础柱状图](./images/verticalbar.png)
 ```
 <vcc-verticalbar
       :source="testData"
@@ -37,8 +36,8 @@ title
 subtitle    
 ```
 
-### 横向竖状图
-![横向竖状图](./images/reversebar.png)
+### 横向柱状图
+![横向柱状图](./images/reversebar.png)
 ```
 <vcc-reversebar
       :source="testData"

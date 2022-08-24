@@ -99,6 +99,8 @@ export default {
   methods: {
     composeOptions() {
       const _that = this;
+      
+      _that.defaultOptions.series[0].data = []
 
       if (!_that.ring) { // 实心饼图
         _that.defaultOptions.series[0].radius = '50%';
@@ -127,6 +129,15 @@ export default {
 
         this.piebarChart.setOption(composeOptionsSource(this.defaultOptions, this.options));
       }
+    }
+  },
+  watch: {
+    source: {
+      handler() {
+        this.composeOptions();
+        this.piebarChart.setOption(composeOptionsSource(this.defaultOptions, this.options));
+      },
+      deep: true
     }
   }
 }

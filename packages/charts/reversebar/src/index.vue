@@ -57,7 +57,7 @@ export default {
         },
         grid: {
           top: '3%',            
-          left: '3%',
+          left: '6%',
           right: '4%',
           bottom: '3%',
         },
@@ -109,6 +109,9 @@ export default {
     composeOptions() {
       const _that = this;
 
+      _that.defaultOption.yAxis.data = [];
+      _that.defaultOption.series[0].data = [];
+
       _that.defaultOption.title.text = this.title;
       _that.defaultOption.title.subtext = this.subTitle;
 
@@ -135,6 +138,15 @@ export default {
 
         this.reverseChart.setOption(composeOptionsSource(this.defaultOption, this.options));
       }
+    }
+  },
+  watch: {
+    source: {
+      handler() {
+        this.composeOptions();
+        this.reverseChart.setOption(composeOptionsSource(this.defaultOption, this.options));
+      },
+      deep: true
     }
   }
 }

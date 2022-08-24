@@ -82,12 +82,16 @@ export default {
     this.init();
   },
   methods: {
-    composeData() {
+    composeOptions() {
       const _that = this;
 
       const seriesData = [];
       const xAxisData = _that.source.length > 0 && _that.source[0].data.map(ele => ele.name) || [];
       const kinds = [];
+      
+      _that.defaultOptions.xAxis.data = [];
+      _that.defaultOptions.series = seriesData;
+      _that.defaultOptions.legend.data = kinds;
 
       _that.source.forEach((ele, index) => {
         let values = ele.data.map(inner => inner.value);
@@ -125,10 +129,19 @@ export default {
         this.blineChart = markRaw(echarts.init(this.chartDom, null, { renderer: 'svg' })); 
 
         if (this.blineChart) {
-          this.composeData();
+          this.composeOptions();
           this.blineChart.setOption(composeOptionsSource(this.defaultOptions, this.options));
         }
       }
+    }
+  },
+  watch: {
+    source: {
+      handler() {
+        this.composeOptions();
+        this.blineChart.setOption(composeOptionsSource(this.defaultOptions, this.options));
+      },
+      deep: true
     }
   }
 }

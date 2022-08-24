@@ -88,6 +88,8 @@ export default {
     composeOptions() {
       const axisData = [];
       const yxisData = [];
+      this.defaultOptions.xAxis[0].data = [];
+      this.defaultOptions.series = [];
 
       this.source.forEach(ele => {
         axisData.push(ele.name);
@@ -119,9 +121,17 @@ export default {
         this.verticalChart = markRaw(echarts.init(this.verticalDom, null, {renderer: 'svg'}));
 
         this.composeOptions();
-
         this.verticalChart.setOption(composeOptionsSource(this.defaultOptions, this.options));
       }
+    }
+  },
+  watch: {
+    source: {
+      handler() {
+        this.composeOptions();
+        this.verticalChart.setOption(composeOptionsSource(this.defaultOptions, this.options));
+      },
+      deep: true
     }
   }
 }
