@@ -6,14 +6,13 @@
       :source="testData"
     /> -->
 
-    <!-- <vcc-piebar
-      ring
-      :source="testData"
-    /> -->
-
-    <vcc-blinebar
+    <vcc-piebar
       :source="testData"
     />
+
+    <!-- <vcc-blinebar
+      :source="testData"
+    /> -->
 
     <!-- <vcc-verticalbar 
       :source="testData"
@@ -26,9 +25,9 @@
 <script>
 // import VccReversebar from '../packages/charts/reversebar/src/index.vue';
 
-// import VccPiebar from '../packages/charts/piebar/src/index.vue';
+import VccPiebar from '../packages/charts/piebar/src/index.vue';
 
-import VccBlinebar from '../packages/charts/blinebar/src/index.vue';
+// import VccBlinebar from '../packages/charts/blinebar/src/index.vue';
 
 // import VccVerticalbar from '../packages/charts/verticalbar/src/index.vue';
 
@@ -36,54 +35,60 @@ export default {
   name: 'AppTest',
   components: {
     // VccReversebar,
-    // VccPiebar,
-    VccBlinebar,
+    VccPiebar,
+    // VccBlinebar,
     // VccVerticalbar
   },
   data() {
     return {
-      colors: ['#ff0000', '#0000ff'],
-      color: '#0000ff',
-      // testData: [
-      //   {
-      //     name: 'A',
-      //     value: 90
-      //   }, {
-      //     name: 'B',
-      //     value: 80
-      //   }
-      // ],
+      // colors: ['#ff0000', '#0000ff'],
+      // color: '#0000ff',
       testData: [
         {
           name: 'A',
-          data: [
-            {
-              name: 'mon',
-              value: 100
-            }, {
-              name: 'tue',
-              value: 200
-            }, {
-              name: 'wed',
-              value: 400
-            }
-          ]
+          value: 90
         }, {
           name: 'B',
-          data: [
-            {
-              name: 'mon',
-              value: 300
-            }, {
-              name: 'tue',
-              value: 600
-            }, {
-              name: 'wed',
-              value: 900
-            }
-          ]
-        }, 
+          value: 80
+        }, {
+          name: 'C',
+          value: 60
+        }, {
+          name: 'D',
+          value: 20
+        }
       ],
+      // testData: [
+      //   {
+      //     name: 'A',
+      //     data: [
+      //       {
+      //         name: 'mon',
+      //         value: 100
+      //       }, {
+      //         name: 'tue',
+      //         value: 200
+      //       }, {
+      //         name: 'wed',
+      //         value: 400
+      //       }
+      //     ]
+      //   }, {
+      //     name: 'B',
+      //     data: [
+      //       {
+      //         name: 'mon',
+      //         value: 300
+      //       }, {
+      //         name: 'tue',
+      //         value: 600
+      //       }, {
+      //         name: 'wed',
+      //         value: 900
+      //       }
+      //     ]
+      //   }, 
+      // ],
       // testData: [],
       // options: {
       //   series: [
