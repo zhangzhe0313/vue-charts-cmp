@@ -1,19 +1,20 @@
 <template>
-  <div v-if="source && source.length > 0" class="chart-wrap" ref="blineBar"></div>
-  <empty-data v-else />
+  <layout :source="source">
+    <div class="chart-wrap" ref="blineBar"></div>
+  </layout>
 </template>
 
 <script>
 import * as echarts from 'echarts';
-import EmptyData from '../../../components/empty/index.vue';
+import Layout from '../../../components/layout/index.vue';
 import { composeOptionsSource } from '../../../tools';
 import { markRaw } from 'vue';
 
 export default {
   name: 'VccBlinebar',
   components: {
-    EmptyData
-  },
+    Layout
+},
   props: {
     source: {
       type: Array,

@@ -6,18 +6,18 @@
       :source="testData"
     /> -->
 
-    <vcc-piebar
+    <!-- <vcc-piebar
       :source="testData"
-    />
+    /> -->
 
     <!-- <vcc-blinebar
       :source="testData"
     />  -->
 
-    <!-- <vcc-verticalbar 
+    <vcc-verticalbar 
       :source="testData"
       :color="color"
-    /> -->
+    />
 
   </div>
 </template>
@@ -25,19 +25,19 @@
 <script>
 // import VccReversebar from '../packages/charts/reversebar/src/index.vue';
 
-import VccPiebar from '../packages/charts/piebar/src/index.vue';
+// import VccPiebar from '../packages/charts/piebar/src/index.vue';
 
 // import VccBlinebar from '../packages/charts/blinebar/src/index.vue';
 
-// import VccVerticalbar from '../packages/charts/verticalbar/src/index.vue';
+import VccVerticalbar from '../packages/charts/verticalbar/src/index.vue';
 
 export default {
   name: 'AppTest',
   components: {
     // VccReversebar,
-    VccPiebar,
+    // VccPiebar,
     // VccBlinebar,
-    // VccVerticalbar
+    VccVerticalbar
   },
   data() {
     return {
@@ -113,31 +113,31 @@ export default {
       //     name: 'tue',
       //     value: 50
       //   }
-      // ]
+      // ],
     }
   },
-  mounted() {
-    const _that = this;
-    let cnt = 1;
+  // mounted() {
+  //   const _that = this;
+  //   let cnt = 1;
 
-    setInterval(() => {
-      _that.testData.shift();
-      _that.testData.push({
-        name: 'A' +  cnt,
-        value: Math.round(Math.random() * 100)
-      })
+  //   setInterval(() => {
+  //   //   _that.testData.shift();
+  //   //   _that.testData.push({
+  //   //     name: 'A' +  cnt,
+  //   //     value: Math.round(Math.random() * 100)
+  //   //   })
 
-      // _that.testData.forEach(ele => {
-      //   ele.data.shift();
-      //   ele.data.push({
-      //     name: 'mon' + cnt,
-      //     value: Math.round(Math.random() * 100)
-      //   })
-      // })
+  //     _that.testData.forEach(ele => {
+  //       ele.data.shift();
+  //       ele.data.push({
+  //         name: 'mon' + cnt,
+  //         value: Math.round(Math.random() * 100)
+  //       })
+  //     })
 
-      cnt++;
-    }, 3000)
-  }
+  //     cnt++;
+  //   }, 3000)
+  // }
 }
 
 </script>

@@ -1,17 +1,18 @@
 <template>
-  <div v-if="source && source.length > 0"  class="chart-wrap" ref="pieBar"></div>
-  <empty-data-cmp v-else />
+  <layout :source="source">
+    <div class="chart-wrap" ref="pieBar"></div>
+  </layout>
 </template>
 
 <script>
 import * as echarts from 'echarts';
-import EmptyDataCmp from '../../../components/empty/index.vue';
+import Layout from '../../../components/layout/index.vue';
 import { composeOptionsSource } from '../../../tools';
 
 export default {
   name: 'VccPiebar',
   components: {
-    EmptyDataCmp
+    Layout
   },
   props: {
     source: {
@@ -99,7 +100,7 @@ export default {
   methods: {
     composeOptions() {
       const _that = this;
-      
+
       _that.defaultOptions.series[0].data = []
 
       if (!_that.ring) { // 实心饼图

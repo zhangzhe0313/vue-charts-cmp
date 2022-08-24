@@ -1,11 +1,12 @@
 <template>
-  <div v-if="source && source.length > 0"  class="chart-wrap" ref="verticalBar"></div>
-  <empty-data-cmp v-else />
+  <layout :source="source">
+    <div class="chart-wrap" ref="verticalBar"></div>
+  </layout>
 </template>
 
 <script>
 import * as echarts from 'echarts';
-import EmptyDataCmp from '../../../components/empty/index.vue';
+import Layout from '../../../components/layout/index.vue';
 import { composeOptionsSource } from '../../../tools';
 import { markRaw } from 'vue';
 
@@ -13,7 +14,7 @@ import { markRaw } from 'vue';
 export default {
   name: 'VccVerticalbar',
   components: {
-    EmptyDataCmp
+    Layout
   },
   props: {
     options: {
