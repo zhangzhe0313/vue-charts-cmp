@@ -63,6 +63,9 @@ subtitle
 
 
 ### 饼状图
+![环状图](./images/ringbar.png)
+![饼状图](./images/piebar.png)
+
 ```
 <vcc-piebar
       :source="testData"
