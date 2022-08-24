@@ -1,6 +1,6 @@
 {
   "name": "vue-charts-cmp",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "private": false,
   "main": "dist/vcc-chart.umd.min.js",
   "files": [
