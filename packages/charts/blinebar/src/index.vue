@@ -63,7 +63,7 @@ export default {
           data: []
         },
         grid: {
-          left: '4%',
+          left: '6%',
           right: '4%',
         },
         xAxis: {
