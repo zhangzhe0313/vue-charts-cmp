@@ -42,26 +42,7 @@ module.exports = {
           .tap(options => {
             // 修改它的选项...
             return options
-          });
-
-          config.output.filename('./js/[name].[chunkhash:8].js');
-          config.output.chunkFilename('./js/[name].[chunkhash:8].js');
-
-    //  config.optimization.splitChunks({
-    //     chunks: 'all',
-    //     cacheGroups: {
-    //         vue: {
-    //           name: 'vue',
-    //           priority: -10, 
-    //           test: /[\\/]node_modules[\\/]vue[\\/]/ // in order to adapt to cnpm
-    //         },
-    //         echarts: {
-    //           name: 'echarts',
-    //           priority: -10, 
-    //           test: /[\\/]node_modules[\\/]echarts[\\/]/ // in order to adapt to cnpm
-    //         }
-    //     }
-    //  })     
+          });    
   },
   productionSourceMap: false
 };
