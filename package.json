@@ -1,6 +1,6 @@
 {
   "name": "vue-charts-cmp",
-  "version": "1.0.16",
+  "version": "1.0.18",
   "private": false,
   "main": "dist/vcc-chart.umd.min.js",
   "files": [
@@ -10,7 +10,8 @@
   "keywords": [
     "vue-charts-cmp",
     "vue-charts",
-    "charts"
+    "charts",
+    "vue3"
   ],
   "license": "MIT",
   "scripts": {

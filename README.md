@@ -1,4 +1,5 @@
 # vue-charts-cmp
+## vue3 (不支持vue2)
 
 
 ### 引入文件
